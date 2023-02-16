@@ -14623,12 +14623,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Generate a list of random numbers using random module in Python</span>
 <span class="kn">import</span> <span class="nn">random</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1009</span><span class="p">)</span>
-<span class="n">rndList_2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">random_lst</span> <span class="o">=</span> <span class="p">[]</span>
+
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">):</span>
-    <span class="n">rndList_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
+    <span class="n">random_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
     
-<span class="nb">print</span><span class="p">(</span><span class="n">rndList_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_lst</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14650,7 +14650,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[46, 3, 124, 19, 189, 133, 122, 42, 128, 196, 196, 60, 54, 70, 22, 8, 52, 50, 149, 19, 172, 126, 41, 130, 191, 25, 146, 86, 118, 3, 130, 34, 152, 90, 160, 35, 35, 177, 163, 117, 198, 55, 109, 4, 43, 116, 117, 76, 77]
+<pre>[150, 121, 145, 184, 131, 33, 46, 91, 138, 160, 93, 41, 38, 167, 109, 149, 110, 77, 172, 153, 75, 89, 71, 109, 9, 168, 121, 9, 125, 107, 125, 189, 175, 10, 101, 27, 118, 122, 151, 125, 134, 8, 155, 115, 97, 82, 105, 155, 10]
 </pre>
 </div>
 </div>
@@ -14668,8 +14668,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Calculate the mean value for the list by looping through its element</span>
-<span class="kn">import</span> <span class="nn">statistics</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rndList_2</span><span class="p">))</span>
+<span class="n">res1</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">random_lst</span><span class="p">:</span>
+    <span class="n">res1</span> <span class="o">+=</span> <span class="n">i</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">res1</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">random_lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14691,7 +14695,49 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>94.04081632653062
+<pre>106.0204081632653
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Double check the mean</span>
+<span class="n">sum_lst</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">random_lst</span><span class="p">)</span>
+<span class="n">mean2</span> <span class="o">=</span> <span class="n">sum_lst</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">random_lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mean2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>106.0204081632653
 </pre>
 </div>
 </div>
@@ -14709,7 +14755,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Calculate the variance of the list</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">variance</span><span class="p">(</span><span class="n">rndList_2</span><span class="p">))</span>
+<span class="n">top</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">random_lst</span><span class="p">:</span>
+    <span class="n">top</span> <span class="o">+=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">mean</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">bottom</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">random_lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+
+<span class="n">variance</span> <span class="o">=</span> <span class="n">top</span><span class="o">/</span><span class="n">bottom</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14731,7 +14785,48 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>3646.6649659863947
+<pre>2638.770408163266
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Double check the variance of the list</span>
+<span class="kn">import</span> <span class="nn">statistics</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">variance</span><span class="p">(</span><span class="n">random_lst</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2638.770408163265
 </pre>
 </div>
 </div>
