@@ -1,7 +1,7 @@
 import math as mth
 import random
 
-import os
+#import os
 directory = "Geom_Directory"
 #parent_dir = r"C:\Users\amyca\GTECH-HW\Assignment_4"
 #path = os.path.join(parent_dir, directory)
@@ -45,13 +45,20 @@ class Square(Geom):
      return self.side **2
 
 class Triangle(Geom):
-    def __init__(self, base, height):
-        self.base = base
-        self.height = height
-        super().__init__()
+  def __init__(self, base, height):
+      self.base = base
+      self.height = height
+      super().__init__()
 
-    #area method
-    def area(self):
-        return (self.base * self.height)*0.5
+  #area method
+  def area(self):
+      return (self.base * self.height)*0.5
+  
+
+  
+from pathlib import Path
+
+source_path = Path(__file__).resolve()
+source_dir = source_path.parent
     
 
