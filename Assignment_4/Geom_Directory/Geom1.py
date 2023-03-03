@@ -2,7 +2,7 @@ import math as mth
 import random
 
 #import os
-directory = "Geom_Directory"
+#directory = "Geom_Directory"
 #parent_dir = r"C:\Users\amyca\GTECH-HW\Assignment_4"
 #path = os.path.join(parent_dir, directory)
 #os.mkdir(path)

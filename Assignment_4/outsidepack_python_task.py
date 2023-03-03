@@ -4,17 +4,16 @@
 
 
 #How I created a directory:
-import os
-directory = "Geom_Directory"
-parent_dir = r"C:\Users\amyca\GTECH-HW\Assignment_4"
-path = os.path.join(parent_dir, directory)
-os.mkdir(path)
-print("Directory '% s' created" % directory)
-
+#import os
+#directory = "Geom_Directory"
+#parent_dir = r"C:\Users\amyca\GTECH-HW\Assignment_4"
+#path = os.path.join(parent_dir, directory)
+#os.mkdir(path)
+#print("Directory '% s' created" % directory)
 
 #Import a single class from a single class module within this package
 #Square
-from Square import Square
+from Geom_Directory.Square import *
 
 #Testing
 side = 8
@@ -25,7 +24,7 @@ print('Area Test 1: My square area is ',my_square.area())
 
 
 #Importing a single class from a module that stores multiple classes
-from Geom1 import Geom
+from Geom_Directory.Geom1 import Geom
 
 #Testing
 my_geom = Geom()
@@ -34,7 +33,7 @@ my_geom.print_name()
 #################
 
 #importing multiple classes from a module
-from Geom1 import Geom, Square, Triangle
+from Geom_Directory.Geom1 import Geom, Square, Triangle
 
 #Testing
 ##Triangle
@@ -53,7 +52,7 @@ print('Area Test 3: My square area is ',my_square.area())
 #################
 
 #Importing an entire module
-from Geom1 import *
+from Geom_Directory.Geom1 import *
 
 #Testing
 #Circle
