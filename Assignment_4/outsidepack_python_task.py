@@ -2,15 +2,6 @@
 #Overview: Created a package (Geom_Directory) of single class modules (Triangle.py, Square.py) and multiple classes module (Geom1.py).
 #Used relative import to access modules into this .py documet
 
-
-#How I created a directory:
-#import os
-#directory = "Geom_Directory"
-#parent_dir = r"C:\Users\amyca\GTECH-HW\Assignment_4"
-#path = os.path.join(parent_dir, directory)
-#os.mkdir(path)
-#print("Directory '% s' created" % directory)
-
 #Import a single class from a single class module within this package
 #Square
 from Geom_Directory.Square import *
